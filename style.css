@@ -1,0 +1,894 @@
+@import url(https://allfont.net/allfont.css?fonts=league-spartan);
+
+/* start customizing */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #ffe7e2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #ffe7e2;
+}
+
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 5px 50px;
+}
+
+#navbarLogo{
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 1.5rem;
+    color: #3e8fe6;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbarMenu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbarItem{
+    height: 80px;
+}
+
+.navbarLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    color: #000;
+    transition: all .3s ease;
+}
+
+
+.navbarBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ffb1a0;
+    color: #fff;
+    transition: all .3s ease;
+    margin-left: 25px;
+}
+
+.button:hover{
+    background: #8cdacf;
+    color: #000;
+    transition: all .5s ease;
+}
+
+.navbarLinks:hover{
+    color:#8cdacf;
+    transition: all .3s ease;
+}
+
+/* Mobile Responsive 1 */
+@media screen and (max-width: 1100px) {
+    .navbarContainer{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        width: 100%;
+        z-index: 1;
+        max-width: 1300px;
+        padding: 0;
+    } 
+
+    .navbarMenu{
+        display: grid;
+        margin: 0;
+        grid-template-columns: auto;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all .5s ease;
+        z-index: -1;
+    }
+
+    .navbarMenu.active{
+        background: #ffe7e2;
+        top: 100%;
+        opacity: 1;
+        transition: all .5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.5rem;
+    }
+
+    #navbarLogo{
+        padding-left: 25px;
+    }
+
+    .navbarToggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all .3s ease-in-out;
+        background: #ffb1a0;
+    }
+
+    .navbarItem{
+        width: 100%;
+    }
+
+    .navbarLinks{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbarBtn{
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobileMenu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);  
+    }
+
+    .navbarToggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobileMenu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobileMenu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobileMenu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .navbarItem, .navbarBtn a{
+        font-size: 20px;
+    }
+
+    #navbarLogo{
+        font-size: 17px;
+    }
+}
+
+/*  Top Section */
+.top{
+    padding: 150px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 90%;
+}
+
+
+.topContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    padding: 30px;
+}
+
+.topHeading{
+    font-family: 'League Spartan Bold', arial;
+    font-weight: 800;
+    font-size: 5rem;
+    margin-bottom: 25px;
+    align-items: left;
+    text-align: left;
+}
+
+.topDescription{
+    font-size: 2rem;
+    color: #3e8fe6;
+}
+
+.highlight{
+    border-bottom: 4px solid #ffb1a0;
+}
+
+.mainBtn{
+    font-size: 1.8rem;
+    background: #ffb1a0;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all .8s;
+    outline: none;
+    position: relative;
+}
+
+.mainBtn a{
+    color: #ffff;
+    z-index: 2;
+    text-decoration: none;
+    position: relative;
+}
+
+.mainBtn:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #8cdacf;
+    transition: all .8s;
+    border-radius: 4px;
+}
+
+.mainBtn:hover:after{
+    width: 100%;
+}
+
+/* Mobile Responsive 2 */
+@media screen and (max-width:1100px){
+    .topDescription{
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .backpic{
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topHeading{
+        font-size: 6rem;
+        margin-top: 0;
+    }
+
+    .topDescription{
+        font-size: 2.5rem;;
+    }
+
+    .top{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .backpic{
+        display: grid;
+        width:100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .mainBtn{
+        font-size:2.5rem;
+    }
+
+    .backpic{
+        width: max-content;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .top{
+        margin: 0;
+        padding: 0;
+    }
+    .topHeading{
+        font-size: 2.7rem;
+        margin-top: 10px;
+    }
+
+    .topDescription{
+        font-size: 17px;
+    }
+    
+    .mainBtn{
+        font-size: 17px;
+        margin-bottom: 0;
+    }
+
+    .backpic{
+        display: grid;
+        width: 280px;
+        height: 240px;
+        margin: 0 0 50px 0;
+    }
+}
+
+/* Story Section */
+.main{
+    background-color: #ffe7e2;
+    padding: 10px 0;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 99;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    background-size: cover;
+    background: rgba(255, 249, 249, 0.591);
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .5);
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-left: 1px solid rgba(255, 255, 255, .5);
+}
+
+.mainContent{
+    width: 100%;
+}
+
+.mainContent h1{
+    margin-top: 150px;
+    font-size: 2.8rem;
+    font-family: 'League Spartan Bold', arial;
+}
+
+.mainContent p{
+    font-size: 20px;
+    margin-top: 1rem;
+    margin-bottom: 150px;
+}
+
+.main__imgContainer{
+    text-align: center;
+}
+
+.main__imgCard{
+    margin: 10px;
+    height: 400px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Mobile Responsive 3*/
+@media screen and (max-width:1100px) {
+    .mainContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 90%;
+        padding: 50px 60px;
+    }
+
+    .main__imgContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__imgCard{
+        height: 325px;
+        width: 425px;
+    }
+
+    .mainContent{
+        text-align: center;
+    }
+
+    .mainContent h1{
+        margin-top: 2rem;
+        font-size: 2.8rem;
+    }
+
+    .mainContent p{
+        margin-top: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .mainBtn{
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 10px 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer{
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .main__imgCard{
+        width: 470px;
+        height: 350px;
+    }
+
+    .mainContent{
+        margin: 0 auto;
+        width: 620px;
+    }
+
+    .mainContent h1{
+        font-size: 40px;
+        margin-top: 0;
+    }
+
+    .mainContent p{
+        font-size: 17px;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .mainContainer{
+        max-width: 300px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    }
+    .main__imgCard{
+        width: 290px;
+        height: 270px;
+    }
+
+    .mainContent{
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .mainContent h1{
+        font-size: 25px;
+        margin-top: 0;
+    }
+
+    .mainContent p{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Menu Section */
+.menu{
+    background-image: linear-gradient(to top, #ee9ca7 0%, #ffe7e2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 5rem 0;
+    margin-top: 100px;
+}
+
+.menuTitle{
+    font-size: 2.8rem;
+    font-family: 'League Spartan Bold', arial;
+    margin-bottom: 50px;
+}
+
+.menuTitle:hover, .serviceTitle:hover{
+    border-bottom: 5px solid #000;
+    transition: .4s;
+    cursor: default;
+}
+
+.menuTitle.transitioned, .serviceTitle.transitioned {
+    border-bottom: 5px solid #000;
+}
+
+.menuBtn{
+    display: flex;
+}
+
+.menuBtn button{
+    color: #fff;
+    padding: 14px 64px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #869ef3;
+    font-size: 17px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+    transition: all .5s ease;
+}
+
+.menuBtn button:hover{
+    cursor: pointer;
+    background: #8cc1fa;
+    color: #000;
+    transform: translateY(-12px)
+}
+
+.menuWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1300px;
+    padding: 50px 0;
+}
+
+.menuCard{
+    height: 340px;
+    width: 550px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    transition: .3s ease-in;
+    border: 1px solid rgba(255, 255, 255, .4);
+    margin:0 50px;
+    align-items: center;
+    text-decoration: none;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.menuCard:hover{
+    transform: scale(1.05);
+}
+
+.menuCard h2{
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+.menuCard p{
+    text-align: left;
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.menuText{
+    margin:0 30px;
+}
+
+/* Mobile Responsive 4 */
+@media screen and (max-width:1100px) {
+    .menuWrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuCard.one{
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width:460px){
+    .menuTitle{
+        font-size: 25px;
+    }
+
+    .menuCard{
+        height: 500px;
+        width: 280px;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin:0 50px;
+        align-items: center;
+    }
+
+    .menuCard img{
+        width: 220px;
+        height: 100%;
+        margin: auto;
+    }
+    .menuCard p{
+        font-size: 15px;
+    }
+
+    .menuCard h2{
+        font-size: 20px;
+        margin: 0;
+    }
+    
+    .menu{
+        padding-top: 0;
+    }
+}
+
+/* Service Section */
+.service{
+    background: #ee9ca7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+.service h3{
+    font-family: 'League Spartan Bold', arial;
+    font-size: 25px;
+}
+
+.service h1{
+    font-family: 'League Spartan Bold', arial;
+    font-size: 2.8rem;
+    margin: 30px;
+}
+
+.serviceWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1300px;
+    padding: 0 80px;
+}
+
+.serviceCard{
+    text-align: center;
+    padding: 40px;
+    justify-content: center;
+}
+
+.serviceCard h2{
+    margin: 15px auto;
+}
+
+.serviceCard p{
+    font-size: 17px;
+}
+
+/* Mobile Responsive 5 */
+@media screen and (max-width:768px){
+
+}
+
+@media screen and (max-width:460px){
+    .serviceWrapper{
+        width: 100%;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 0;
+        align-items: center;
+    }
+
+    .service h1{
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .service h3{
+        font-size: 15px;
+    }
+
+    .serviceCard{
+        width: 100%;
+    }
+}
+
+/* Profile */
+.profile{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left img{
+    width: 150px;
+    height: 150px;
+}
+
+.right{
+    margin: auto 0;
+    padding-left: 20px;
+}
+.right h2{
+    margin-bottom: 100px;
+}
+
+.right p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* Location */
+.location{
+    text-align: center;
+}
+
+.location p{
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.location img{
+    height: 20px;
+    width: 20px;
+    margin: 20px 15px 0;
+}
+
+/* Contact */
+.email{
+    margin: 15px auto;
+}
+
+.form{
+    margin: 10px;
+}
+.text{
+    font-size: 15px;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    outline: none;
+}
+
+textarea{
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.contactBtn button{
+    border-radius: 10px;
+    background-color: #ffb1a0;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+}
+
+.contactBtn button:hover{
+    background-color: #8cdacf;
+    
+}
+
+/* Copyright */
+.copyright{
+    text-align: center;
+    font-size: 13px;
+    padding:10px 0;
+}
+
+/* footer */
+footer{
+    background: #ee9ca7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-image: url(asset/bottom.svg);
+    
+}
+
+.footerWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerContent{
+    margin: auto;
+    padding: 0
+}
+
+/* Mobile Responsive 6 */
+@media screen and (max-width:1100px){    
+    .left img{
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (max-width:460px){
+    .footerWrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin:0;
+        align-items: center;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .location{
+        margin: 60px 0;
+    }
+
+    .contact{
+        margin-bottom: 40px;
+    }
+}
